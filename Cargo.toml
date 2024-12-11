@@ -1,0 +1,13 @@
+[package]
+name = "verify_wasmedge_static_link"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasmedge-sdk = "0.14.0"
+
+[features]
+default = ["standalone", "static"]
+standalone = ["wasmedge-sdk/standalone"]
+static = ["wasmedge-sdk/static"]
+wasi_nn = ["wasmedge-sdk/wasi_nn"]
